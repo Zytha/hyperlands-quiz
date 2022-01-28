@@ -1,0 +1,22 @@
+{
+  "name": "hyperlands-quiz",
+  "version": "1.0.2",
+  "main": "./index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Zytha",
+  "license": "ISC",
+  "description": "",
+  "bin": "./index.js",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "chalk-animation": "^1.6.0",
+    "figlet": "^1.5.2",
+    "gradient-string": "^2.0.0",
+    "inquirer": "^8.2.0",
+    "spinner": "^0.3.4"
+  }
+}
