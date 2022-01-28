@@ -13,4 +13,4 @@ npx hyperlands-quiz
 npm i figlet gradient-string inquirer
 ```
 
-This CLI tool is inspired by FireShip.io[https://github.com/fireship-io]
+This CLI tool is inspired by [FireShip.io](https://github.com/fireship-io)
