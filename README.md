@@ -1,10 +1,10 @@
 # Hyperlands Quiz CLI Tool
 A cool quiz for Hyperlaners
 
-##Take the Quiz
+## Take the Quiz
 ``npx hyperlands-quiz``
 
-##Packages Used
+## Packages Used
 Figlet[https://github.com/patorjk/figlet.js] | Gradient-String[https://github.com/bokub/gradient-string] | Inquirer[https://github.com/SBoudrias/Inquirer.js]
 ``npm i figlet gradient-string inquirer``
 
