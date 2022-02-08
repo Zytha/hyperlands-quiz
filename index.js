@@ -8,6 +8,14 @@ import inquirer from 'inquirer';
 
 let xboxGamerTag;
 
+const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
+
+async function welcome(){
+  console.clear();
+  console.log(chalk.blue('Welcome to the ' + chalk.cyan.bold('Hyperlands Quiz')));
+  await sleep();
+}
+
 async function askName(){
     console.clear();
     const answers = await inquirer.prompt({
@@ -38,7 +46,6 @@ async function question1(){
         await question2();
     } else {
         await lost();
-        process.exit(1)
     }
 }
 
@@ -60,7 +67,6 @@ async function question2(){
         await question3();
     } else {
         await lost();
-        process.exit(1)
     }
 }
 
@@ -83,23 +89,22 @@ async function question3(){
         await winner();
     } else {
         await lost();
-        process.exit(1)
     }
 }
 
-function winner(){
-    figlet('Nice, you won nothing', function(err, data) {
+async function winner(){
+    figlet(`GG, ${xboxGamerTag}`, function(err, data) {
         console.clear();
-        console.log(gradient('cyan', 'cyan')(data));
+        console.log(gradient('cyan', 'blue')(data));
     });
 }
 
-function lost(){
-    figlet('get gud', function(err, data) {
-        console.clear();
-        console.log(gradient('cyan', 'cyan')(data));
+async function lost(){
+    figlet(`You lose. ${xboxGamerTag}`, function(err, data) {
+        console.log(gradient('cyan', 'blue')(data));
     });
 }
 
+await welcome();
 await askName();
 await question1();
